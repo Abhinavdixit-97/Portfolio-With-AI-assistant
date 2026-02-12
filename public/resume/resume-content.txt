@@ -1,0 +1,89 @@
+ABHINAV DIKSHIT
+Full Stack Developer
+
+📧 abhinavdixit093@gmail.com
+📱 +91 9758326337
+📍 Gokulpur, Delhi
+🔗 linkedin.com/in/abhinav-dikshit-91aa5327b
+🐙 github.com/Abhinavdixit-97
+
+═══════════════════════════════════════════════════════════════════
+
+SUMMARY
+═══════════════════════════════════════════════════════════════════
+
+Motivated Full Stack Developer with hands-on experience in building web applications using React and Node.js. Strong understanding of REST APIs, Data Structures, and database integration. Eager to contribute to real-world development and grow as a software engineer.
+
+═══════════════════════════════════════════════════════════════════
+
+TECHNICAL SKILLS
+═══════════════════════════════════════════════════════════════════
+
+Languages:      Java, Python, JavaScript, HTML, CSS
+Frameworks:     React.js, Node.js, Express.js
+Databases:      MySQL, MongoDB
+Tools:          Git, GitHub, VS Code, IntelliJ IDEA, MySQL Workbench
+Concepts:       DSA, System Design, REST APIs
+
+═══════════════════════════════════════════════════════════════════
+
+PROJECTS
+═══════════════════════════════════════════════════════════════════
+
+Job Portal Web Application
+• Developed a professional job portal with secure authentication, recruiter and candidate dashboards
+• Implemented job management and application tracking system
+• Built backend APIs and database schemas with token-based authentication
+• Technologies: React, Node.js, MySQL, JWT
+
+TaskMate – Task Manager
+• Created a full-stack task management system enabling task creation, updates, and tracking
+• Implemented reliable backend support with real-time updates
+• Technologies: Node.js, Express, MongoDB
+
+Portfolio Website
+• Built a personal portfolio website to showcase technical projects, skills, and certifications
+• Designed clean responsive UI with modern animations and interactions
+• Technologies: HTML, CSS, JavaScript
+
+═══════════════════════════════════════════════════════════════════
+
+EXPERIENCE
+═══════════════════════════════════════════════════════════════════
+
+Full Stack Intern | Soft Nexis                           June 2025 – Aug 2025
+• Developed RESTful APIs using Node.js and Express
+• Built reusable React components and responsive UI designs
+• Used GitHub for version control and team collaboration
+• Collaborated with cross-functional teams to deliver high-quality solutions
+
+═══════════════════════════════════════════════════════════════════
+
+EDUCATION
+═══════════════════════════════════════════════════════════════════
+
+B.Tech in Computer Science | AKTU                        2023 – 2026 (78%)
+Diploma in Electrical Engineering | BTEUP                2019 – 2022 (74%)
+High School | UP Board                                   2019 (79%)
+
+═══════════════════════════════════════════════════════════════════
+
+CERTIFICATIONS
+═══════════════════════════════════════════════════════════════════
+
+• Cloud Computing (IIT Madras - NPTEL)
+• Joy of Computing using Python (IIT Madras - NPTEL)
+• Design and Analysis of Algorithms (IIT Madras - NPTEL)
+• DSA with Java (Apna College)
+
+═══════════════════════════════════════════════════════════════════
+
+KEY ACHIEVEMENTS
+═══════════════════════════════════════════════════════════════════
+
+• Developed 3+ full-stack web applications with modern technologies
+• Completed 4 professional certifications from prestigious institutions
+• Maintained consistent academic performance with 78% CGPA
+• Gained hands-on industry experience through internship
+• Built responsive and user-friendly web interfaces
+• Implemented secure authentication and database management systems
