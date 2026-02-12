@@ -101,7 +101,7 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-2">Abhinav Dikshit</h3>
               <p className="text-neon-blue mb-4">Full Stack Developer</p>
               <p className="text-white/70 leading-relaxed">
-                Based in Gokulpur, Delhi, I'm passionate about creating innovative web solutions 
+                Based in Gokulpur, Delhi, I&apos;m passionate about creating innovative web solutions 
                 that make a difference. Currently pursuing B.Tech in Computer Science at AKTU.
               </p>
               
@@ -137,7 +137,7 @@ export default function About() {
                 backend technologies, I enjoy building full-stack applications that solve real-world problems.
               </p>
               <p className="text-white/80 leading-relaxed mb-6">
-                From developing job portals to task management systems, I've gained hands-on experience 
+                From developing job portals to task management systems, I&apos;ve gained hands-on experience 
                 in modern web technologies. My internship at Soft Nexis further strengthened my skills 
                 in API development and React component architecture.
               </p>

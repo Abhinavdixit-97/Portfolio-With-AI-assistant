@@ -6,6 +6,7 @@ import { downloadResume } from '@/lib/utils/downloadResume'
 
 export default function Resume() {
   const [downloadCount, setDownloadCount] = useState(0)
+  const resumePath = 'resume/Abhinav_Dikshit_Resume.pdf'
 
   const handleDownload = () => {
     downloadResume()
@@ -13,7 +14,7 @@ export default function Resume() {
   }
 
   const viewOnline = () => {
-    window.open('/resume/Abhinav_Dikshit_Resume.pdf', '_blank')
+    window.open(resumePath, '_blank')
   }
 
   const resumeHighlights = [
@@ -30,20 +31,20 @@ export default function Resume() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-4 font-display">Resume</h2>
-          <p className="text-xl text-white/60">Download Abhinav Dikshit's professional resume</p>
+          <p className="text-xl text-white/60">Download Abhinav Dikshit&apos;s professional resume</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="glass-card p-8">
             <div className="aspect-[3/4] bg-white rounded-lg shadow-2xl overflow-hidden mb-6">
               <object
-                data="/resume/Abhinav_Dikshit_Resume.pdf#view=FitH&toolbar=0&navpanes=0"
+                data={`${resumePath}#view=FitH&toolbar=0&navpanes=0`}
                 type="application/pdf"
                 className="w-full h-full"
                 aria-label="Abhinav Dikshit resume preview"
               >
                 <iframe
-                  src="/resume/Abhinav_Dikshit_Resume.pdf#view=FitH&toolbar=0&navpanes=0"
+                  src={`${resumePath}#view=FitH&toolbar=0&navpanes=0`}
                   className="w-full h-full"
                   title="Abhinav Dikshit resume preview"
                 />

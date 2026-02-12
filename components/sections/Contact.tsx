@@ -132,7 +132,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-4 font-display">Get In Touch</h2>
-          <p className="text-xl text-white/60">Let's build something amazing together</p>
+          <p className="text-xl text-white/60">Let&apos;s build something amazing together</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -143,9 +143,9 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl font-bold mb-6 gradient-text">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-6 gradient-text">Let&apos;s Connect</h3>
               <p className="text-white/80 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
+                I&apos;m always open to discussing new opportunities, interesting projects, 
                 or just having a chat about technology. Feel free to reach out through 
                 any of the channels below.
               </p>

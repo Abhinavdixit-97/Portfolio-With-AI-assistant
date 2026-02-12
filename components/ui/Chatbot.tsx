@@ -16,14 +16,39 @@ const starters = [
   'Are you open to internships?',
 ]
 
+const getStaticReply = (question: string) => {
+  const q = question.toLowerCase()
+
+  if (q.includes('stack') || q.includes('tech')) {
+    return 'Abhinav works with React.js, Next.js, Node.js, Express.js, MySQL, and MongoDB.'
+  }
+
+  if (q.includes('project')) {
+    return 'Key projects include Job Portal, TaskMate, and this portfolio website. You can explore details in the Projects section.'
+  }
+
+  if (q.includes('contact') || q.includes('email') || q.includes('phone')) {
+    return 'You can reach Abhinav at abhinavdixit093@gmail.com or +91 9758326337.'
+  }
+
+  if (q.includes('intern') || q.includes('hire') || q.includes('open to')) {
+    return 'Yes, Abhinav is open to internship and developer opportunities.'
+  }
+
+  return 'This GitHub Pages build runs in static mode, so live AI chat is unavailable here. Check the sections above or contact Abhinav directly.'
+}
+
 export default function Chatbot() {
+  const isGithubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true'
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
-  const [messages, setMessages] = useState<ChatMessage[]>([
+  const [messages, setMessages] = useState<ChatMessage[]>(() => [
     {
       role: 'assistant',
-      content: "Hi! I am Abhinav's portfolio assistant. Ask me anything about his skills, projects, or experience.",
+      content: isGithubPages
+        ? "Hi! I can answer basic portfolio questions in static mode on GitHub Pages."
+        : "Hi! I am Abhinav's portfolio assistant. Ask me anything about his skills, projects, or experience.",
     },
   ])
 
@@ -39,6 +64,15 @@ export default function Chatbot() {
     ]
     setMessages(nextMessages)
     setInput('')
+
+    if (isGithubPages) {
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: getStaticReply(trimmed) },
+      ])
+      return
+    }
+
     setLoading(true)
 
     try {

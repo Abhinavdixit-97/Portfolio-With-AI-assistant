@@ -107,7 +107,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-4 font-display">Projects</h2>
-          <p className="text-xl text-white/60">Things I've built</p>
+          <p className="text-xl text-white/60">Things I&apos;ve built</p>
         </motion.div>
 
         {/* Projects Grid */}

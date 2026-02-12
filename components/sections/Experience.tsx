@@ -170,60 +170,69 @@ export default function Experience() {
 
           {/* Timeline Items */}
           <div className="space-y-12">
-            {allItems.map((item, index) => (
-              <motion.div
-                key={`${item.type}-${index}`}
-                className="timeline-item relative flex items-start gap-8"
-                whileHover={{ scale: 1.02 }}
-              >
-                {/* Timeline Dot */}
-                <div className={`relative z-10 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center flex-shrink-0`}>
-                  <item.icon className="text-white" size={24} />
-                </div>
+            {allItems.map((item, index) => {
+              const grade =
+                'grade' in item && typeof item.grade === 'string' ? item.grade : null
+              const achievements =
+                'achievements' in item && Array.isArray(item.achievements)
+                  ? (item.achievements as string[])
+                  : null
 
-                {/* Content Card */}
+              return (
                 <motion.div
-                  className="glass-card p-6 flex-1"
-                  whileHover={{ y: -5 }}
+                  key={`${item.type}-${index}`}
+                  className="timeline-item relative flex items-start gap-8"
+                  whileHover={{ scale: 1.02 }}
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
-                      <p className="text-neon-blue font-semibold">{item.company}</p>
-                    </div>
-                    <div className="flex items-center gap-2 text-white/60 mt-2 md:mt-0">
-                      <Calendar size={16} />
-                      <span className="text-sm">{item.period}</span>
-                    </div>
+                  {/* Timeline Dot */}
+                  <div className={`relative z-10 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center flex-shrink-0`}>
+                    <item.icon className="text-white" size={24} />
                   </div>
 
-                  <p className="text-white/80 mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
-
-                  {/* Grade/Achievements */}
-                  {'grade' in item && (
-                    <div className="inline-block px-3 py-1 bg-neon-blue/20 text-neon-blue rounded-full text-sm font-semibold">
-                      {item.grade}
+                  {/* Content Card */}
+                  <motion.div
+                    className="glass-card p-6 flex-1"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                        <p className="text-neon-blue font-semibold">{item.company}</p>
+                      </div>
+                      <div className="flex items-center gap-2 text-white/60 mt-2 md:mt-0">
+                        <Calendar size={16} />
+                        <span className="text-sm">{item.period}</span>
+                      </div>
                     </div>
-                  )}
 
-                  {'achievements' in item && item.achievements && (
-                    <div className="mt-4">
-                      <h4 className="text-sm font-semibold text-neon-blue mb-2">Key Achievements:</h4>
-                      <ul className="space-y-1">
-                        {item.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-white/70">
-                            <div className="w-1.5 h-1.5 bg-neon-blue rounded-full" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                    <p className="text-white/80 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    {/* Grade/Achievements */}
+                    {grade && (
+                      <div className="inline-block px-3 py-1 bg-neon-blue/20 text-neon-blue rounded-full text-sm font-semibold">
+                        {grade}
+                      </div>
+                    )}
+
+                    {achievements && (
+                      <div className="mt-4">
+                        <h4 className="text-sm font-semibold text-neon-blue mb-2">Key Achievements:</h4>
+                        <ul className="space-y-1">
+                          {achievements.map((achievement, i) => (
+                            <li key={i} className="flex items-center gap-2 text-sm text-white/70">
+                              <div className="w-1.5 h-1.5 bg-neon-blue rounded-full" />
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              )
+            })}
           </div>
         </div>
 

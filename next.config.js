@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isStaticExport =
+  process.env.GITHUB_ACTIONS === 'true' || process.env.EXPORT_STATIC === 'true'
+const repoName = 'Portfolio-With-AI-assistant'
+const basePath = isStaticExport ? `/${repoName}` : ''
+
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   images: {
+    unoptimized: isStaticExport,
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
   webpack: (config) => {
@@ -12,13 +15,20 @@ const nextConfig = {
       use: {
         loader: 'file-loader',
         options: {
-          publicPath: '/_next/static/files/',
+          publicPath: `${basePath}/_next/static/files/`,
           outputPath: 'static/files/',
         },
       },
-    });
-    return config;
+    })
+    return config
   },
+}
+
+if (isStaticExport) {
+  nextConfig.output = 'export'
+  nextConfig.trailingSlash = true
+  nextConfig.basePath = basePath
+  nextConfig.assetPrefix = basePath
 }
 
 module.exports = nextConfig
